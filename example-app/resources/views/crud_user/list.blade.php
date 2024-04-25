@@ -10,19 +10,21 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>soThich</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($users as $user)
                             <tr>
-                                <th>{{ $user->id }}</th>
-                                <th>{{ $user->name }}</th>
-                                <th>{{ $user->email }}</th>
+                                <th>{!! $user->id !!}</th>
+                                <th>{!! $user->name !!}</th>
+                                <th>{!! $user->email !!}</th>
+                                <th>{!! $user->soThich !!}</th>
                                 <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                                    <a href="{!! route('user.readUser', ['id' => $user->id]) !!}">View</a> |
+                                    <a href="{!! route('user.updateUser', ['id' => $user->id]) !!}">Edit</a> |
+                                    <a href="{!! route('user.deleteUser', ['id' => $user->id]) !!}">Delete</a>
                                 </th>
                             </tr>
                         @endforeach

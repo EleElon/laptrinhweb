@@ -1,3 +1,4 @@
+
 @extends('dashboard')
 
 @section('content')
@@ -10,13 +11,15 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>soThich</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{{$messi->id}}</td>
-                            <td>{{$messi->name}}</td>
-                            <td>{{$messi->email}}</td>
+                            <td>{!!$messi->id!!}</td>
+                            <td>{!!$messi->name!!}</td>
+                            <td>{!!$messi->email!!}</td>
+                            <td>{!!$messi->soThich!!}</td>
                         </tr>
                     </tbody>
                 </table>
